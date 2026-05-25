@@ -1,0 +1,604 @@
+/* =========================
+      RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+      BASE
+========================= */
+body {
+  font-family: Arial, sans-serif;
+  background: #11131a;
+  color: #e5e7eb;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  color: #fff;
+}
+
+/* =========================
+      BUTTON
+========================= */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: 0.3s;
+  box-shadow: 0 0 15px rgba(99,102,241,0.3);
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 25px rgba(99,102,241,0.5);
+}
+
+/* =========================
+      HERO
+========================= */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #1a1c25 0%, #11131a 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(99,102,241,0.25), transparent 70%);
+  top: -120px;
+  right: -120px;
+  filter: blur(40px);
+}
+
+.hero h1 {
+  font-size: 52px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+/* =========================
+      ABOUT
+========================= */
+.about {
+  padding: 80px 0;
+  background: linear-gradient(180deg, #11131a, #181b24);
+}
+
+.about h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.about p {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  text-align: center;
+  font-size: 18px;
+  color: #b0b4c0;
+}
+
+.about-features {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.feature {
+  background: rgba(255,255,255,0.06);
+  padding: 20px 30px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(8px);
+  font-size: 18px;
+  font-weight: 600;
+  color: #e5e7eb;
+}
+
+/* =========================
+      SERVICES
+========================= */
+.services {
+  padding: 80px 0;
+  background: linear-gradient(180deg, #181b24, #11131a);
+}
+
+.services h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.service-card {
+  background: #1e212c;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 0 15px rgba(255,215,0,0.15);
+  border: 1px solid rgba(255,215,0,0.25);
+  transition: 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 25px rgba(255,215,0,0.35);
+  border-color: rgba(255,215,0,0.45);
+}
+
+
+.service-card p {
+  color: #b0b4c0;
+}
+
+/* =========================
+      PORTFOLIO
+========================= */
+.portfolio {
+  padding: 80px 0;
+  background: linear-gradient(180deg, #11131a, #181b24);
+}
+
+.portfolio h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.portfolio-item {
+  background: #1e212c;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(255,215,0,0.15);
+  border: 1px solid rgba(255,215,0,0.25);
+  transition: 0.3s;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 25px rgba(255,215,0,0.35);
+  border-color: rgba(255,215,0,0.45);
+}
+
+
+.portfolio-img {
+  height: 180px;
+  background: linear-gradient(135deg, #2a2d39, #1e212c);
+}
+
+/* =========================
+      REVIEWS
+========================= */
+.reviews {
+  padding: 80px 0;
+  background: linear-gradient(180deg, #181b24, #11131a);
+}
+
+.reviews h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.review-card {
+  background: transparent; /* фон убираем, он теперь на сторонах */
+  padding: 0; /* padding тоже переносится на стороны */
+  border-radius: 14px;
+  transition: 0.3s;
+}
+
+
+.review-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 25px rgba(255,215,0,0.35);
+  border-color: rgba(255,215,0,0.45);
+}
+
+.review-card p {
+  font-size: 18px;
+  color: #f3f4f6;
+  line-height: 1.7;
+  font-style: italic;
+}
+
+.review-card span {
+  display: block;
+  margin-top: 10px;
+  text-align: right;
+  color: #ffd700;
+  font-weight: 600;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+
+/* =========================
+      CONTACT
+========================= */
+.contact {
+  padding: 80px 0;
+  background: linear-gradient(180deg, #11131a, #181b24);
+}
+
+.contact h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 18px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,215,0,0.25);
+  border-radius: 14px;
+  color: #fff;
+  font-size: 17px;
+  transition: 0.3s;
+  box-shadow: 0 0 12px rgba(255,215,0,0.1);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #ffd700;
+  box-shadow: 0 0 20px rgba(255,215,0,0.4);
+}
+
+.contact-form textarea {
+  height: 160px;
+  resize: none;
+}
+
+
+/* =========================
+      FOOTER
+========================= */
+.footer {
+  background: #0d0f14;
+  padding: 25px 0;
+  text-align: center;
+  color: #9ca3af;
+}
+
+/* =========================
+      ANIMATIONS
+========================= */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* =========================
+      MODAL WINDOW
+========================= */
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  backdrop-filter: blur(6px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal-content {
+  background: #1e212c;
+  border: 1px solid rgba(255,215,0,0.35);
+  box-shadow: 0 0 25px rgba(255,215,0,0.45);
+  padding: 30px;
+  border-radius: 14px;
+  width: 90%;
+  max-width: 500px;
+  animation: modalShow 0.3s ease;
+}
+
+@keyframes modalShow {
+  from { transform: translateY(20px); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}
+
+.modal-close {
+  float: right;
+  font-size: 28px;
+  cursor: pointer;
+  color: #ffd700;
+}
+
+
+/* =========================
+      REVIEW FLIP CARDS
+========================= */
+
+.flip {
+  perspective: 1000px;
+  cursor: pointer;
+  min-height: 220px;
+  position: relative;
+}
+
+.flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.7s;
+  transform-style: preserve-3d;
+}
+
+.flip.flip-active .flip-inner {
+  transform: rotateY(180deg);
+}
+
+/* Передняя и задняя стороны */
+.flip-front,
+.flip-back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  border-radius: 14px;
+  padding: 30px;
+  background: #1e212c;
+  border: 1px solid rgba(255,215,0,0.25);
+  box-shadow: 0 0 15px rgba(255,215,0,0.15);
+}
+
+/* Задняя сторона */
+.flip-back {
+  transform: rotateY(180deg);
+  color: #f3f4f6;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+
+/* =========================
+   GOLD CURVED NEON LINES (SVG background)
+   Вставить в конец style.css, удалить старые body::before/after
+========================= */
+
+body {
+  position: relative;
+  z-index: 1;
+}
+
+/* основной неоновый слой с кривыми (SVG в data-uri) */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.55;
+  filter: blur(8px) saturate(1.1);
+  /* SVG с несколькими кривыми и градиентом; можно подправить цвета/прозрачность */
+  background-image: url("data:image/svg+xml;utf8,\
+  <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900' preserveAspectRatio='xMidYMid slice'>\
+    <defs>\
+      <linearGradient id='g1' x1='0' x2='1'>\
+        <stop offset='0' stop-color='%23ffd966' stop-opacity='0.95'/>\
+        <stop offset='1' stop-color='%23ffb84d' stop-opacity='0.6'/>\
+      </linearGradient>\
+      <filter id='glow' x='-50%' y='-50%' width='200%' height='200%'>\
+        <feGaussianBlur stdDeviation='18' result='b'/>\
+        <feMerge><feMergeNode in='b'/><feMergeNode in='SourceGraphic'/></feMerge>\
+      </filter>\
+    </defs>\
+    <!-- длинная плавная кривая 1 -->\
+    <path d='M -200 700 C 200 400, 600 200, 1000 300 C 1400 420, 1800 600, 2200 500' \
+      stroke='url(%23g1)' stroke-width='6' fill='none' stroke-linecap='round' filter='url(%23glow)' opacity='0.95'/>\
+    <!-- вторая кривая, чуть выше -->\
+    <path d='M -200 600 C 150 350, 550 180, 950 260 C 1350 340, 1750 520, 2150 420' \
+      stroke='url(%23g1)' stroke-width='4' fill='none' stroke-linecap='round' filter='url(%23glow)' opacity='0.7'/>\
+    <!-- тонкая третья кривая -->\
+    <path d='M -200 800 C 250 500, 650 300, 1050 380 C 1450 460, 1850 640, 2250 540' \
+      stroke='url(%23g1)' stroke-width='2.5' fill='none' stroke-linecap='round' filter='url(%23glow)' opacity='0.5'/>\
+  </svg>");
+  animation: neonShift 12s linear infinite;
+}
+
+/* лёгкое движение кривых — плавный сдвиг и изменение прозрачности */
+@keyframes neonShift {
+  0%   { transform: translateY(0) translateX(0) scale(1); opacity: 0.48; }
+  25%  { transform: translateY(-6px) translateX(-8px) scale(1.01); opacity: 0.62; }
+  50%  { transform: translateY(-12px) translateX(6px) scale(1.02); opacity: 0.55; }
+  75%  { transform: translateY(-6px) translateX(-4px) scale(1.01); opacity: 0.60; }
+  100% { transform: translateY(0) translateX(0) scale(1); opacity: 0.48; }
+}
+
+/* дополнительный мягкий подсвет (локальные пятна света) */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9998;
+  background:
+    radial-gradient(circle at 85% 12%, rgba(255,215,0,0.08), transparent 12%),
+    radial-gradient(circle at 10% 78%, rgba(255,215,0,0.06), transparent 10%);
+  filter: blur(22px);
+  opacity: 0.9;
+  animation: pulseSoft 9s ease-in-out infinite;
+}
+
+@keyframes pulseSoft {
+  0%   { transform: scale(1); opacity: 0.6; }
+  50%  { transform: scale(1.03); opacity: 0.9; }
+  100% { transform: scale(1); opacity: 0.6; }
+}
+
+
+/* =========================
+      ADAPTIVE (1024px)
+========================= */
+
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  .services-grid,
+  .portfolio-grid,
+  .reviews-grid {
+    gap: 20px;
+  }
+}
+
+
+/* =========================
+      ADAPTIVE (768px)
+========================= */
+
+@media (max-width: 768px) {
+  /* Hero */
+  .hero {
+    height: auto;
+    padding: 80px 0;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  /* About */
+  .about-features {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Services */
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Portfolio */
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Reviews */
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Contact */
+  .contact-form {
+    width: 100%;
+  }
+}
+
+
+/* =========================
+      ADAPTIVE (480px)
+========================= */
+
+@media (max-width: 480px) {
+  /* Заголовки */
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 60px 0;
+  }
+
+  /* Services */
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Portfolio */
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Reviews */
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Contact */
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
