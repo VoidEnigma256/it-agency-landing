@@ -590,6 +590,23 @@ body::after {
     grid-template-columns: 1fr;
   }
 
+  .review-card {
+    height: auto;
+    min-height: 260px;
+  }
+
+  .review-card .front,
+  .review-card .back {
+    height: auto;
+    padding: 20px;
+  }
+
+  .review-card .back p {
+    font-size: 16px;
+    line-height: 1.5;
+    word-break: break-word;
+  }
+
   /* Contact */
   .contact-form input,
   .contact-form textarea {
