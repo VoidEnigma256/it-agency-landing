@@ -592,7 +592,7 @@ body::after {
 
   .review-card {
     height: auto;
-    min-height: 320px;
+    min-height: 350px;
   }
 
   .review-card .front,
